@@ -58,7 +58,7 @@ app.use(cookieParser());
 const appSettings = {
     tenantId: process.env.TENANT_ID, // Enter the tenant info here,
     clientId: process.env.CLIENT_ID, // Enter the client Id here,
-    //clientSecret: process.env.MICROSOFT_PROVIDER_AUTHENTICATION_SECRET, // Enter the client secret here,
+    clientSecret: process.env.MICROSOFT_PROVIDER_AUTHENTICATION_SECRET, // Enter the client secret here,
     redirectUri: "https://" + process.env.WEBSITE_HOSTNAME + "/.auth/login/aad/callback", // Enter the redirect route here
 };
 
