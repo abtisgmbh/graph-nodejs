@@ -41,6 +41,14 @@ router.get(
     graphController.getUsersPage
 );
 
+router.get(
+    '/bookingBusinesses', 
+    (req, res, next) => {
+        return req.msid.ensureAuthenticated()(req, res, next);
+    },
+    graphController.getBookingBusinessesPage
+);
+
 // 404
 router.get('*', (req, res) => res.status(404).redirect('/404.html'));
 
