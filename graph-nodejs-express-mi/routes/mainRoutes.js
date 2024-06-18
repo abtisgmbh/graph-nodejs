@@ -42,6 +42,11 @@ router.get(
 );
 
 router.get(
+    '/usersbypass', 
+    graphController.getUsersPage
+);
+
+router.get(
     '/bookingBusinesses', 
     (req, res, next) => {
         return req.msid.ensureAuthenticated()(req, res, next);
