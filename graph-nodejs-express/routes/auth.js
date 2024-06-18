@@ -22,6 +22,12 @@ router.get('/acquireToken', authProvider.acquireToken({
     successRedirect: '/users/profile'
 }));
 
+router.get('/acquireBookingsToken', authProvider.acquireToken({
+    scopes: ['Bookings.Read.All'],
+    redirectUri: REDIRECT_URI,
+    successRedirect: '/solutions/bookingBusinesses'
+}));
+
 router.post('/redirect', authProvider.handleRedirect());
 
 router.get('/signout', authProvider.logout({
