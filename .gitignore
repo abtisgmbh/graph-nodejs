@@ -130,7 +130,7 @@ dist
 .pnp.*
 
 # secrets
-dev.env
+*.env
 
 #vscode
 .vscode/settings.json
