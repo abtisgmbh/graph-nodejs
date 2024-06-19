@@ -24,7 +24,7 @@ npm install
 npm start
 ```
 
-- Open a browser at http://localhost:3000
+- Open a browser at http://localhost:8080
 - Press F12 to open the "Developer Tools" in your browser
 - Switch to the tab "Console"
 
