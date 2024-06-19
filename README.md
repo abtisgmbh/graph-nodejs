@@ -8,3 +8,7 @@ The code is based on Microsoft examples but was in all cases changed and expande
 ## Public Client Authentication with SPA
 
 - [graph-nodejs-static](./graph-nodejs-static)
+
+## Confidential Client Authentication with Node Express
+
+- [graph-nodejs-express](./graph-nodejs-express)
