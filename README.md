@@ -12,3 +12,7 @@ The code is based on Microsoft examples but was in all cases changed and expande
 ## Confidential Client Authentication with Node Express
 
 - [graph-nodejs-express](./graph-nodejs-express)
+
+## Managed Identity Access to Graph with Node Express
+
+- [graph-nodejs-express](./graph-nodejs-express-mi)

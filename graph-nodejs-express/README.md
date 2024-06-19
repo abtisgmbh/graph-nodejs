@@ -5,6 +5,7 @@ This demonstrates user authentication to a confidential client and a simple call
 ## First steps
 
 - Create an app registration in your test tenant
+- Create a client secret in  the app registration
 - Rename the `.env.template` file to `.env`
 - Add the required information to `.env`
 
