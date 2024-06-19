@@ -131,6 +131,7 @@ dist
 
 # secrets
 *.env
+*.env.js
 
 #vscode
 .vscode/settings.json
