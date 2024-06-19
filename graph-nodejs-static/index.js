@@ -1,16 +1,16 @@
-async function run() {
-    console.log("running...");
+async function getProfile() {
+    console.log("Get Profile");
     const config = {
         auth: {
-            clientId: '713f0c36-573b-400e-97c5-254ab0bb6bb6',
-            authority: 'https://login.microsoftonline.com/138b16d3-74e4-4699-98ba-fdd9866bedda/',
-            redirectUri: 'http://localhost:8080'
+            clientId: window.CLIENT_ID,
+            authority: window.AUTHORITY,
+            redirectUri: window.REDIRECT_URI
         }
     };
-    const scopes = ['user.read', 'user.readbasic.all'];
+    const scopes = ['user.read'];
 
     var client = new msal.PublicClientApplication(config);
-    const account = client.getAllAccounts()[0] || (loginResponse = await client.loginPopup({scopes: scopes}).account);
+    const account = client.getAllAccounts()[0] || (await client.loginPopup({scopes: scopes}).account);
     const options = {
         authProvider: new MSGraphAuthCodeMSALBrowserAuthProvider.AuthCodeMSALBrowserAuthenticationProvider(client, {
             account: account,
@@ -21,6 +21,33 @@ async function run() {
 
     var graphClient = MicrosoftGraph.Client.initWithMiddleware(options);
 
-    let profile = await graphClient.api('/users').get();
+    let profile = await graphClient.api('/me').get();
     console.dir(profile);
+}
+
+async function getUsers() {
+    console.log("Get Users");
+    const config = {
+        auth: {
+            clientId: window.CLIENT_ID,
+            authority: window.AUTHORITY,
+            redirectUri: window.REDIRECT_URI
+        }
+    };
+    const scopes = ['user.read', 'user.readbasic.all'];
+
+    var client = new msal.PublicClientApplication(config);
+    const account = client.getAllAccounts()[0] || (await client.loginPopup({scopes: scopes}).account);
+    const options = {
+        authProvider: new MSGraphAuthCodeMSALBrowserAuthProvider.AuthCodeMSALBrowserAuthenticationProvider(client, {
+            account: account,
+            scopes: scopes,
+            interactionType: msal.InteractionType.Popup,
+        })
+    };
+
+    var graphClient = MicrosoftGraph.Client.initWithMiddleware(options);
+
+    let users = await graphClient.api('/users').get();
+    console.dir(users);
 }
