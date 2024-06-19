@@ -3,7 +3,7 @@
  * Licensed under the MIT License.
  */
 
-require('dotenv').config({ path: 'dev.env' });
+require('dotenv').config();
 
 var path = require('path');
 var express = require('express');
