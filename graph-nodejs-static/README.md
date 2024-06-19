@@ -1,5 +1,9 @@
 # Public Client Authentication with SPA
 
+This demonstrates user authentication to a public client and a simple call to the Graph API using the JavaScript SDK for Microsoft Graph.
+
+It is based on the following video, which also provides a walkthrough of the code: [Getting Started with the Microsoft Graph SDK from your JavaScript apps](https://youtu.be/rkDa9TbJDGc?si=AEIws3AX2cwyn7t6).
+
 ## First steps
 
 - Create an app registration in your test tenant
