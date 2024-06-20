@@ -19,8 +19,7 @@ function Add-ManagedIdentityPermissions {
         [Parameter()]
         [string[]]
         $ApplicationPermissions = @(
-            'User.Read.All',
-            'Bookings.Read.All'
+            'User.Read.All'
         )
     )
 
