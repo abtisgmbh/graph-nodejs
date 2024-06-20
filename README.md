@@ -4,7 +4,6 @@ This repository contains example code that demonstrates, how to use MSAL and Jav
 
 The code is based on Microsoft examples but was in all cases changed and expanded by abtis.
 
-
 ## Public Client Authentication with SPA
 
 - [graph-nodejs-static](./graph-nodejs-static)
@@ -15,4 +14,4 @@ The code is based on Microsoft examples but was in all cases changed and expande
 
 ## Managed Identity Access to Graph with Node Express
 
-- [graph-nodejs-express](./graph-nodejs-express-mi)
+- [graph-nodejs-express-mi](./graph-nodejs-express-mi)
